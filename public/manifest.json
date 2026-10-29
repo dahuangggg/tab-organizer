@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "AI 标签整理",
+  "version": "0.1.0",
+  "description": "只在你点「一键整理」时，按你正在做的事把标签页分组。默认不向云端发送浏览数据。",
+  "minimum_chrome_version": "138",
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_popup": "popup/index.html", "default_title": "AI 标签整理" },
+  "options_page": "options/index.html",
+  "permissions": ["tabs", "tabGroups", "storage", "sessions", "scripting"],
+  "optional_permissions": ["bookmarks"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "commands": {
+    "organize": {
+      "suggested_key": { "default": "Alt+G" },
+      "description": "一键整理标签页"
+    }
+  }
+}

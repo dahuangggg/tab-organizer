@@ -1,0 +1,32 @@
+{
+  "name": "ai-tab-organizer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Chrome extension that groups tabs by what you are working on, only when you ask it to.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "npm run build && node scripts/e2e.mjs dist \"$CHROME_PATH\" .e2e",
+    "e2e:chrome": "npx @puppeteer/browsers install chrome@stable --path .cache/chrome",
+    "eval:live": "EVAL_LIVE=1 vitest run tests/live-eval.test.ts"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@preact/preset-vite": "^2.10.6",
+    "@puppeteer/browsers": "^3.2.6",
+    "@types/chrome": "^0.3.7",
+    "@types/node": "^24.19.2",
+    "puppeteer-core": "^25.16.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "idb": "^8.0.4",
+    "preact": "^11.1.0"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.zip
+.DS_Store
+.cache/
+.e2e/
+.env.local
+.eval-live-report.txt
+.eval-live-raw.txt
